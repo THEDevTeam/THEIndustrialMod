@@ -1,0 +1,10 @@
+name: THECore
+version: dev-SNAPSHOT
+description: The Core for an IndustrialCraft and BuildCraft port.
+author: THEDevTeam
+
+main: com.thedevteam.thecore.THECore
+protocol: Minecraft 1.2.4
+load: startup
+
+platform: BOTH
