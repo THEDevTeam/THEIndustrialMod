@@ -10,9 +10,11 @@ import java.net.URLClassLoader;
 import java.util.ArrayList;
 import java.util.Enumeration;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
+import java.util.Set;
 import java.util.jar.JarEntry;
 import java.util.jar.JarFile;
 import java.util.logging.Level;
@@ -24,37 +26,20 @@ public class PartRegister {
 	
 	private final THEIndustrialMod tim;
 	  private final File dir;
-	  //private Map<String, File> PartJars;
-	 // private final ClassLoader classLoader;
 	  private Map<String, Part> Parts;
 
 	  public PartRegister(THEIndustrialMod theindustrialmod)
 	  {
 	    tim = theindustrialmod;
-	   // PartJars = new HashMap<String, File>();
 	    Parts = new HashMap<String, Part>();
 	    dir = new File(tim.getDataFolder(), "Parts");
 	    dir.mkdirs();
-	    //List<URL> urls = new ArrayList<URL>();
 	    
 	    
 	    for (String file : dir.list()) {
 	      if (!file.contains(".jar")) continue;
 	      File f = new File(dir, file);
 	      String partName = file.replace(".jar", "");
-//	      if (PartJars.containsKey(partName)) {
-//	        tim.log(Level.WARNING, "Part duplicated. Please remove: " + partName);
-//	      } else {
-//	    	  
-//	    	  
-//	    	  
-//	    	  PartJars.put(partName, f);
-//	    	  try {
-//		          urls.add(f.toURI().toURL());
-//		        } catch (MalformedURLException e) {
-//		          tim.log(Level.SEVERE, e);
-//		        }
-//	      }
 	      if(isLoaded(partName))continue;
 	     Part p = loadPart(f);
 	     if(p !=null){
@@ -65,9 +50,6 @@ public class PartRegister {
 	      
 	    }
 	    
-//	    ClassLoader c = tim.getClass().getClassLoader();
-//	    classLoader = URLClassLoader.newInstance((URL[])urls.toArray(new URL[urls.size()]), c);
-//	    loadParts();
 	    tim.log(Level.INFO, "All Parts loaded. Active Parts: " + Parts.keySet());
 	  }
 
@@ -83,17 +65,6 @@ public class PartRegister {
 	    return null;
 	  }
 
-//	  private void loadParts() {
-//	    for (Entry<String,File> entry : PartJars.entrySet()) {
-//	      if (isLoaded((String)entry.getKey())) {
-//	        continue;
-//	      }
-//	      Part p = loadPart((File)entry.getValue());
-//	      if (p != null) {
-//	        addPart(p);
-//	      }
-//	    }
-//	  }
 
 	  private boolean resolveDependencies(Part p) {
 		List<String> deps = p.getDependencies();
@@ -177,8 +148,18 @@ public class PartRegister {
 	    return Parts.containsKey(key.toLowerCase());
 	  }
 
-	  public void enableAllPacks() {
-	    for (Part p : Parts.values())
-	      p.init();
+	  public void enableAllParts() {
+		  Set<Entry<String, Part>> es = new HashSet<Entry<String, Part>>(Parts.entrySet());
+		  while(!es.isEmpty()){
+			  Part p = es.iterator().next().getValue();
+			  for (String dep: p.getDependencies()){
+				  while(es.iterator().hasNext()){
+					  Entry<String, Part> d = es.iterator().next();
+					  if (dep.equalsIgnoreCase(d.getKey()))d.getValue().init(); 
+				  }
+			  }
+			  p.init();
+		  }
+
 	  }
 }
