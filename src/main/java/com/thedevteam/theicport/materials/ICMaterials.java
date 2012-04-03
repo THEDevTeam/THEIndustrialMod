@@ -3,11 +3,11 @@ package com.thedevteam.theicport.materials;
 
 //Equivilent to Vanilla's VanillaMaterials - All Blocks should be registered here
 
-import static org.spout.api.material.MaterialRegistry.register;
+import com.thedevteam.thecore.materials.Materials;
 import org.spout.vanilla.material.block.Ore;
 import org.spout.vanilla.material.generic.GenericItem;
 
-public final class ICMaterials {
+public final class ICMaterials extends Materials{
     private static boolean initialized = false;
     // Blocks
     public static final Ore URANIUM_ORE = register(new Ore("Uranium Ore",1));
