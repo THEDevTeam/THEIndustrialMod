@@ -46,17 +46,10 @@
         </dependency>
         <dependency>
         	<groupId>org.spout</groupId>
-        	<artifactId>SpoutAPI</artifactId>
+        	<artifactId>spoutapi</artifactId>
+        	<version>dev-SNAPSHOT</version>
         </dependency>
     </dependencies>
 
-    <dependencyManagement>
-    	<dependencies>
-    		<dependency>
-    			<groupId>org.spout</groupId>
-    			<artifactId>SpoutAPI</artifactId>
-    			<version>dev-SNAPSHOT</version>
-    		</dependency>
-    	</dependencies>
-    </dependencyManagement>
+
 </project>
