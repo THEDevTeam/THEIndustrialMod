@@ -12,12 +12,16 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
-
-    <repositories>
+    
+        <repositories>
         <repository>
             <id>spout</id>
             <name>spout</name>
             <url>http://nexus.spout.org/content/groups/public/</url>
+        </repository>
+        <repository>
+        <id>spout-plugins</id>
+            <url>http://repo.spout.org</url>
         </repository>
     </repositories>
     <pluginRepositories>
@@ -26,7 +30,7 @@
             <url>http://repo.spout.org</url>
         </pluginRepository>
     </pluginRepositories>
-
+    
     <dependencies>
         <dependency>
             <groupId>junit</groupId>
@@ -36,13 +40,13 @@
         </dependency>
         <dependency>
             <groupId>org.spout</groupId>
-            <artifactId>SpoutAPI</artifactId>
+            <artifactId>vanilla</artifactId>
             <version>dev-SNAPSHOT</version>
         </dependency>
         <dependency>
-            <groupId>org.spout</groupId>
-            <artifactId>vanilla</artifactId>
-            <version>dev-SNAPSHOT</version>
+        	<groupId>org.spout</groupId>
+        	<artifactId>spoutapi</artifactId>
+        	<version>dev-SNAPSHOT</version>
         </dependency>
         <dependency>
             <groupId>com.thedevteam</groupId>
