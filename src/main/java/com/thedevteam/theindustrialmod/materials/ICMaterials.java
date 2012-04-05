@@ -1,9 +1,4 @@
-<<<<<<< HEAD:src/main/java/com/thedevteam/theicport/materials/ICMaterials.java
-
-package com.thedevteam.theicport.materials;
-=======
 package com.thedevteam.theindustrialmod.materials;
->>>>>>> 0c9e94b013de1ded0179ac3fd4f14bf1a1a0e09a:src/main/java/com/thedevteam/theindustrialmod/materials/ICMaterials.java
 
 //Equivilent to Vanilla's VanillaMaterials - All Blocks should be registered here
 
