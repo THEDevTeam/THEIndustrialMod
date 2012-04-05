@@ -4,6 +4,8 @@ import java.util.logging.Level;
 
 import org.spout.api.plugin.CommonPlugin;
 
+import com.thedevteam.theicport.materials.ICMaterials;
+
 public class THEIndustrialMod extends CommonPlugin{
 
 	@Override
@@ -14,6 +16,7 @@ public class THEIndustrialMod extends CommonPlugin{
 
 	@Override
 	public void onEnable() {
+		ICMaterials.initialize();
 		getLogger().log(Level.INFO, "THEIndustrialMod has been enabled");
 	}
 

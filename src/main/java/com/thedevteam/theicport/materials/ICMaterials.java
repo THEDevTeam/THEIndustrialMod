@@ -10,11 +10,11 @@ public final class ICMaterials{
 
 	private static boolean initialized = false;
 	// Blocks
-	public static final Ore URANIUM_ORE = Material.register(new Ore("Uranium Ore", 384));
+	public static final Ore URANIUM_ORE = Material.register(new Ore("Uranium Ore", 400));
 
 	// Items
 	public static final GenericItem URANIUM = Material.register(new GenericItem(
-			"Uranium", 385));
+			"Uranium", 401));
 
 	public static void initialize() {
 		if (initialized)
