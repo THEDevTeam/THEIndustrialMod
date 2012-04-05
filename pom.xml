@@ -48,10 +48,5 @@
         	<artifactId>spoutapi</artifactId>
         	<version>dev-SNAPSHOT</version>
         </dependency>
-        <dependency>
-            <groupId>com.thedevteam</groupId>
-            <artifactId>THECore</artifactId>
-            <version>dev-SNAPSHOT</version>
-        </dependency>
     </dependencies>
 </project>
