@@ -14,8 +14,7 @@ public class THEIndustrialMod extends CommonPlugin{
 
 	@Override
 	public void onEnable() {
-		// TODO Auto-generated method stub
-		
+		getLogger().log(Level.INFO, "THEIndustrialMod has been enabled");
 	}
 
 	public void log(Level warning, Object string) {

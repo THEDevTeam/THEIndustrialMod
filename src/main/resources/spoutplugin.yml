@@ -1,9 +1,9 @@
-name: THECore
+name: THEIndustrialMod
 version: dev-SNAPSHOT
-description: The Core for an IndustrialCraft and BuildCraft port.
+description: The Industrial Mod
 author: THEDevTeam
 
-main: com.thedevteam.thecore.THECore
+main: com.thedevteam.theicport.THEIndustrialMod
 protocol: Minecraft 1.2.4
 load: startup
 
