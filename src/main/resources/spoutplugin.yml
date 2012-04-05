@@ -3,7 +3,7 @@ version: dev-SNAPSHOT
 description: The Industrial Mod
 author: THEDevTeam
 
-main: com.thedevteam.theicport.THEIndustrialMod
+main: com.thedevteam.theindustrialmod.THEIndustrialMod
 protocol: Minecraft 1.2.4
 load: startup
 

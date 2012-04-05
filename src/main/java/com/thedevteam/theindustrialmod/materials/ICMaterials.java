@@ -1,4 +1,4 @@
-package com.thedevteam.theicport.materials;
+package com.thedevteam.theindustrialmod.materials;
 
 //Equivilent to Vanilla's VanillaMaterials - All Blocks should be registered here
 
