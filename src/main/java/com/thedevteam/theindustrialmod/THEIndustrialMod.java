@@ -1,10 +1,10 @@
-package com.thedevteam.theicport;
+package com.thedevteam.theindustrialmod;
 
 import java.util.logging.Level;
 
 import org.spout.api.plugin.CommonPlugin;
 
-import com.thedevteam.theicport.materials.ICMaterials;
+import com.thedevteam.theindustrialmod.materials.ICMaterials;
 
 public class THEIndustrialMod extends CommonPlugin{
 
