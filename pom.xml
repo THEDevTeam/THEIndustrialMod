@@ -48,6 +48,11 @@
         	<artifactId>spoutapi</artifactId>
         	<version>dev-SNAPSHOT</version>
         </dependency>
+        <dependency>
+            <groupId>${project.groupId}</groupId>
+            <artifactId>THETierMod</artifactId>
+            <version>${project.version}</version>
+        </dependency>
     </dependencies>
     
      <!-- Build -->
