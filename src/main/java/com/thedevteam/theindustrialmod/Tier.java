@@ -1,8 +1,7 @@
 package com.thedevteam.theindustrialmod;
 
-import com.thedevteam.thetiermod.web.WebTier;
+import com.thedevteam.thecore.tier.web.WebTier;
 import org.spout.api.event.EventHandler;
-import org.spout.api.event.Listener;
 import org.spout.api.event.Order;
 import org.spout.api.event.block.BlockChangeEvent;
 import org.spout.api.event.inventory.PlayerInventoryCraftEvent;
@@ -11,7 +10,7 @@ import org.spout.api.event.inventory.PlayerInventoryCraftEvent;
  *
  *
  */
-public class Tier extends WebTier implements Listener{
+public class Tier extends WebTier{
 
     @EventHandler(order = Order.MONITOR)
     public void onBlockPlace(BlockChangeEvent event){

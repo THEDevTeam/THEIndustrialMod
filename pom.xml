@@ -44,14 +44,14 @@
             <version>dev-SNAPSHOT</version>
         </dependency>
         <dependency>
-        	<groupId>org.spout</groupId>
-        	<artifactId>spoutapi</artifactId>
-        	<version>dev-SNAPSHOT</version>
+            <groupId>org.spout</groupId>
+            <artifactId>spoutapi</artifactId>
+            <version>dev-SNAPSHOT</version>
         </dependency>
         <dependency>
-            <groupId>${project.groupId}</groupId>
-            <artifactId>THETierMod</artifactId>
-            <version>${project.version}</version>
+            <groupId>com.thedevteam</groupId>
+            <artifactId>THECore</artifactId>
+            <version>dev-SNAPSHOT</version>
         </dependency>
     </dependencies>
     
