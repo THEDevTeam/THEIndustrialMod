@@ -2,11 +2,11 @@ package com.thedevteam.theindustrialmod.materials;
 
 //Equivilent to Vanilla's VanillaMaterials - All Blocks should be registered here
 
-import com.thedevteam.thecore.materials.Materials;
+import org.spout.api.material.MaterialRegistry;
 import org.spout.vanilla.material.block.Ore;
 import org.spout.vanilla.material.generic.GenericItem;
 
-public final class ICMaterials extends Materials{
+public final class ICMaterials extends MaterialRegistry{
 
 	private static boolean initialized = false;
     // Blocks

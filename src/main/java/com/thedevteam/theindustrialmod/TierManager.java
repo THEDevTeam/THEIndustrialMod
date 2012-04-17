@@ -1,11 +1,13 @@
 package com.thedevteam.theindustrialmod;
 
-import com.thedevteam.thecore.tier.web.WebTier;
+
 import org.spout.api.event.EventHandler;
 import org.spout.api.event.Listener;
 import org.spout.api.event.Order;
 import org.spout.api.event.block.BlockChangeEvent;
 import org.spout.api.event.inventory.PlayerInventoryCraftEvent;
+
+import com.thedevteam.thetiermod.web.WebTier;
 
 /**
  *

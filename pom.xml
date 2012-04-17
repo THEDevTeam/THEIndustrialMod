@@ -50,7 +50,7 @@
         </dependency>
         <dependency>
             <groupId>com.thedevteam</groupId>
-            <artifactId>THECore</artifactId>
+            <artifactId>THETierMod</artifactId>
             <version>dev-SNAPSHOT</version>
         </dependency>
     </dependencies>
